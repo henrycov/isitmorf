@@ -1,0 +1,17 @@
+<h1>List of <strong> MEN </strong></h1>
+
+<%= stylesheet_link_tag "manpage"%>
+
+<div class="mx-auto" style="width: 1080px;"> 
+    <% @people.each do |person| %>
+        <% if person.mvote > person.fvote %>
+            <div class = "gallery">
+                <%= image_tag(person.location, size: "250", class: "person_image") %>
+            </div>
+        <% end %>
+  <% end %>
+</div>
+
+<div class="mx-auto" style="width: 250px;">
+         <td><%= link_to 'Back', root_path, class: "btn btn-secondary"%></td>
+</div>

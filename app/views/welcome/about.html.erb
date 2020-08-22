@@ -1,0 +1,49 @@
+<%= stylesheet_link_tag "welcome"%>
+
+
+<div class="mx-auto" style="width: 765px; margin-top:25px">
+    <div class="box" style="margin-bottom:10px">
+        <h3 style='text-align: center; margin-bottom:15px'>About</h3>
+        <p style='margin-left:10px; margin-right:10px;'>
+            Hello! My name is Henry. I'm a Junior Computer Scientist Major
+            at The University of Maryland. I created this website for Art and Activism
+            summer class (2020) and it is my first sucessful attempt at coding and publishing a website.
+            This website was created using the <%= link_to 'Ruby on Rails', 'https://guides.rubyonrails.org/'%> 
+            framework and published using <%= link_to 'Heroku', 'https://www.heroku.com/home'%>. The square buttons are from the 
+            <%= link_to 'Boostrap', 'https://getbootstrap.com/'%> stylesheet and the images of 'people'
+            were taken from <%= link_to 'Unsplash', 'https://unsplash.com/'%>. Everything else was <i>gracefully</i>
+            crafted by me.
+            </br> </br>
+            If you'd like to contact me about this website like reporting nasty bugs you can reach me at
+            henrycov@gmail.com
+        </p>
+        <h4 style='margin-left:10px; margin-bottom:15px'> What's Going On? </h4>
+        <p style='margin-left:10px; margin-right:10px;'>
+            Images are randomly selected from a database a displayed on the homepage.
+            As a member of society it is your job to decide if what's depected is male
+            or female by clicking on the arrows.
+        </p>
+        <p style='margin-left:10px; margin-right:10px;'>
+            Images that are declared male by the majority of society are displayed
+            on the <%= link_to 'Manpage', person_path('manpage')%>.
+            </br>
+            Images that are declared female by the majority of society are displayed
+            on the <%= link_to 'Fempage', person_path('fempage')%>. 
+            </br>
+            What happens to an image that is evenly voted a man and woman?
+            Nonsense that would never happen.
+        </p>
+        <h4 style='margin-left:10px; margin-bottom:15px'>Okay, But Why?</h4>
+        <p style='margin-left:10px; margin-right:10px;'>
+            Well this is technically an art piece created for my Art and Activism class.
+            So I encourage you to interact with the website yourself and derive
+            your own meanings from my silly website. Plus, the website can
+            gain new meaning based on how people interact with it. But, incase it wasn't clear this
+            is a satire on traditional societal views on gender.
+        </p>
+    </div>
+<div>
+
+<div class="mx-auto" style="width: 250px;">
+         <td><%= link_to 'Back', root_path, class: "btn btn-secondary"%></td>
+</div>

@@ -1,0 +1,17 @@
+<h1> List Of <i> Women </i> </h1>
+
+<%= stylesheet_link_tag "fempage"%>
+
+<div class="mx-auto" style="width: 1080px;"> 
+    <% @people.each do |person| %>
+        <% if person.fvote > person.mvote %>
+            <div class = "gallery">
+                <%= image_tag(person.location, size: "250", class: "person_image") %>
+            </div>
+        <% end %>
+  <% end %>
+</div>
+
+<div class="mx-auto" style="width: 250px;">
+         <td><%= link_to 'Back', root_path, class: "btn btn-secondary"%></td>
+</div>

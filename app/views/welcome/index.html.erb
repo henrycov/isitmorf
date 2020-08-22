@@ -1,0 +1,30 @@
+<%= stylesheet_link_tag "welcome"%>
+
+    <h1 style="margin-bottom:px">IS IT MALE OR FEMALE???</h1>
+
+
+<%= objectid = rand(1..53)
+curperson = Person.find(objectid); ""
+%>
+
+
+<div class="mx-auto" style="width: 765px; margin-bottom:10px">
+    <div class="box" style="margin-bottom:10px">
+        <h3 style='text-align: center;'>IT IS YOUR DUTY AS A SOCIETY TO CHOOSE</h3>
+    </div>
+    <table>
+        <th>
+            <%= link_to image_tag('arrows/female.png'), fvoteup_person_path(curperson), method: :post %>
+            <%= image_tag(curperson.location, size: "250", class: "person_image") %>
+            <%= link_to image_tag('arrows/male.png'), mvoteup_person_path(curperson), method: :post %>
+        </th>
+    </table>
+</div>
+<div class="mx-auto" style="width: 505px; margin-bottom:10px"> 
+    <td><%= link_to 'List Of Women', "people/fempage", class: "btn btn-danger"%></td>
+    <td><%= link_to 'List Of MEN', "people/manpage", class: "btn btn-primary"%></td>
+</div>
+
+<div class="mx-auto" style="width: 250px;">
+         <td><%= link_to 'About This Website', "welcome/about", class: "btn btn-secondary"%></td>
+</div>
